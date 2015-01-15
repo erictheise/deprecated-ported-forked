@@ -98,12 +98,93 @@ Endangered Languages in the Information Age</i></a>
         </section>
 
         <section data-background="images/DigiComp1.jpg">
-          <h2></h2>
-          <p>
-            screen text
-          </p>
           <aside class="notes">
             I also (still) have a Digicomp 1 and had a Digicomp 2, which used marbles and was like a pinball machine.
+          </aside>
+        </section>
+
+        <section>
+          <h3>Generations of Programming Languages</h3>
+          <ul>
+            <li class="fragment">1GL: 0s and 1s via switches and patchcords</li>
+            <li class="fragment">2GL: assembly language; readable, but chip-specific</li>
+            <li class="fragment">3GL: high-level; FORTRAN, ALGOL, COBOL (1950s) up to the present day; machine-independent</li>
+            <li class="fragment">4GL: domain-specific languages</li>
+            <li class="fragment">5GL: artificial intelligence</li>
+          </ul>
+          <aside class="notes">
+            Third generation languages are what we usually think of as programming languages. 4GL & 5GL, like VR, are terms that have been distorted by hype and unreasonable expectations. 4GL as report generator or modeling language like GAMS.
+          </aside>
+        </section>
+
+        <!-- other frameworks: procedural/object oriented, imperative/declarative, compiled/dynamic -->
+
+        <section>
+          <h3>What Must a Programming Language Communicate?</h3>
+          <ul>
+            <li class="fragment">variables</li>
+            <li class="fragment">operations</li>
+            <li class="fragment">flow control</li>
+            <li class="fragment">iteration</li>
+            <li class="fragment">externalities</li>
+          </ul>
+          <aside class="notes">
+            speaker notes.
+          </aside>
+        </section>
+
+        <section>
+          <h2><code>hello, world</code></h2>
+          <p>
+            Introduced to a "wide" audience in <i>The C Programming Language</i> (1978), <a href="http://en.wikipedia.org/wiki/%22Hello,_world!%22_program">"hello, world"</a> has become the traditional first program to write in a language. Its stated purpose is to output that phrase to an appropriate output device, but it also reveals something of a language's syntax and structure.
+          </p>
+          <pre><code data-trim contenteditable>
+main( ) {
+  printf("hello, world");
+}
+          </code></pre>
+          <aside class="notes">
+            Hello world is especially delicious when creating a first map.
+          </aside>
+        </section>
+
+        <section>
+          <h2><code>hello, world</code></h2>
+          <p>
+            <a href="http://helloworldcollection.de/">The Hello World Collection</a> includes 456 Hello World programs in many languages, plus 67 human languages.
+          </p>
+          <p>
+            <a href="http://www.99-bottles-of-beer.net//">99 Bottles of Beer</a> includes 1500 variations of a program to output the lyrics of <i>99 Bottles of Beer</i>.
+          </p>
+          <aside class="notes">
+            speaker notes.
+          </aside>
+        </section>
+
+        <section>
+          <h2>Python. Beer.</h2>
+          <pre><code data-trim contenteditable>
+#!/usr/bin/env python
+# -*- coding: iso-8859-1 -*-
+"""
+99 Bottles of Beer (by Gerold Penz)
+"""
+
+for quant in range(99, 0, -1):
+   if quant > 1:
+      print quant, "bottles of beer on the wall,", quant, "bottles of beer."
+      if quant > 2:
+         suffix = str(quant - 1) + " bottles of beer on the wall."
+      else:
+         suffix = "1 bottle of beer on the wall."
+   elif quant == 1:
+      print "1 bottle of beer on the wall, 1 bottle of beer."
+      suffix = "no more beer on the wall!"
+   print "Take one down, pass it around,", suffix
+   print "--"
+          </code></pre>
+          <aside class="notes">
+            speaker notes.
           </aside>
         </section>
 
