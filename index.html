@@ -266,12 +266,12 @@ C     THE FINAL COUPLE OF ROWS, HARD-CODED FOR SIMPLICITY.
       END
           </code></pre>
           <aside class="notes">
-            GOTO considered harmful. Spaghetti code. Structured programming.
+            Go To Statement Considered Harmful, Dijkstra (1968). Spaghetti code. Structured programming.
           </aside>
         </section>
 
         <section>
-          <h2><code>JavaScript</code>, obfuscated.</h2>
+          <h3><code>JavaScript</code>. Minimized & obfuscated.</h3>
           <pre><code data-trim contenteditable>
 <html><head><title>99 Bottles</title></head><body>
 <script>
@@ -308,11 +308,75 @@ C     THE FINAL COUPLE OF ROWS, HARD-CODED FOR SIMPLICITY.
 </body></html>
           </code></pre>
           <aside class="notes">
-            Obfuscation & minimization are Internet best-practices. Note that the code actually runs in my browser!
+            Obfuscation & minimization are Internet best-practices. Note that the code actually runs in my browser! Big security concerns over JavaScript. Generally isolated from file system.
           </aside>
         </section>
 
+<!--
+Idioms. Social mores. http://learncodethehardway.org/blog/AUG_19_2012.html
+-->
+        <section>
+          <h3>Ruby. Idioms (<a href="http://learncodethehardway.org/blog/AUG_19_2012.html">or mores</a>).</h3>
+          <h4>Iteration</h4>
+          <pre><code data-trim contenteditable>
+for i in 1..100 do
+   puts "#{i}."
+end
 
+(1..100).each do |i|
+   puts "#{i}."
+end
+
+(1..100).each{ |i| puts "#{i}."}
+          </code></pre>
+          <aside class="notes">
+            Ruby and other languages have constructs for while, until, times, each.
+          </aside>
+        </section>
+
+        <section>
+          <h3>Ruby. Idioms (<a href="http://learncodethehardway.org/blog/AUG_19_2012.html">or mores</a>).</h3>
+          <h4>Branching</h4>
+          <pre><code data-trim contenteditable>
+def is_on?(light)
+  if light.on?
+    true
+  else
+    false
+  end
+end
+
+def is_on?(light)
+  unless light.on?
+    false
+  else
+    true
+  end
+end
+
+def is_on?(light)
+  light.on? ? true : false
+end
+
+def is_on?(light)
+  true if light.is_on?
+  false if !light.is_on?
+end
+          </code></pre>
+          <aside class="notes">
+            Direct port. Use of negation. Use of terniary. Natural English? You may fail an interview by writing non-idiomatic code.
+          </aside>
+        </section>
+
+        <section>
+          <h2></h2>
+          <p>
+
+          </p>
+          <aside class="notes">
+            speaker notes
+          </aside>
+        </section>
 
 
         <section>
